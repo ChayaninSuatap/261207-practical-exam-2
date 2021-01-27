@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import PersonTable from "./PersonTable";
+import { useState } from "react";
 
 function App() {
+  const [id, setId] = useState(610631100);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="ml-2">
+      <h3 class="title is-3">Person List</h3>
+
+      <PersonTable name="Bob" gender="male" age="50" />
+      <PersonTable name="Alice" gender="female" age="40" />
+      <PersonTable name="Chayanin Suatap 610631100" gender="male" age="25" />
+
+      <h3 class="title is-3">ID Counter</h3>
+      <p>{id}</p>
+      <button onClick={() => setId(id + 1)}>+</button>
+      <button onClick={() => setId(id - 1)}>-</button>
     </div>
   );
 }
