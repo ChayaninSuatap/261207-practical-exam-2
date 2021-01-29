@@ -4,9 +4,9 @@ export default function PersonCard(props) {
       <table class="table is-bordered mb-3">
         <tbody>
           <tr>
-            <td>Name</td>
-            <td>Gender</td>
-            <td>Age</td>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
           </tr>
           <tr>
             <td>{props.name}</td>
